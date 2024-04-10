@@ -1,0 +1,18 @@
+Package: seamcarvdijkstra
+Type: Package
+Title: seam-carving with Dijkstra
+Version: 0.1.0
+Authors@R: c(
+  person("Emmeline", "BOURGET", email = "emmeline.bourget@gmail.com",role = c("aut", "cre")),
+  person("Mikael", "KETEMA", email = "mikael.ketema26@gmail.com",role = c("aut")),
+  person("Birahim", "TEWE", email = "Birahimtewe01@gmail.com",role = c("aut"))) 
+Description: Seam-carving image reduction algorithm with Dijkstra path-finding.
+    Implementation in c++, with Rcpp.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp
