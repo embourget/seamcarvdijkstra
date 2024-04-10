@@ -67,13 +67,14 @@ In both cases, the parameter `img` is expected to be formatted as returned by `r
 
 If you wish to include the C++ module in your module, include `seamcarving-core.h`. The package contains
 
-- `seamcarvingcore::treat(unsigned char* in, unsigned char* out, int height, int width, int channels, Logger log)` core logic function. This will convert the image to grey-scale, apply a Sobel filter, then path-find using Dijkstra for the lowest constrast path, then recut the image. Parameters: 
-    - `Rcpp::NumericVector in_vec` containing the image
+- `seamcarvingcore::treat(unsigned char* in, unsigned char* out, int height, int width, int channels, seamcarvingcore::Logger log)` core logic function. This will convert the image to grey-scale, apply a Sobel filter, then path-find using Dijkstra for the lowest constrast path, then recut the image. Parameters: 
+    - `unsigned char* in` input pointer
+    - `unsigned char* out` output pointer
     - `int height` number of lines
     - `int width` number of columns
     - `int channels` number of bytes per pixels
-    - `bool verbose` set to `true` to print progress to console
- - `seamcarvingcore::class Logger` convenience class to print: only print to `std::cout` if `Logger.verbose` is set to `true`. Methods:
+    - `seamcarvingcore::Logger log` logger for outputting progress
+ - `class seamcarvingcore::Logger` convenience class to print: only print to `std::cout` if `Logger.verbose` is set to `true`. Methods:
     - `push(std::string str)` and `push(int i)` to add element to buffer
     - `print(std::string str)` and `print(int i)` to add element to buffer and print buffer
     - `endl()` to print buffer
